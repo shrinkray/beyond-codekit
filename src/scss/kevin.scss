@@ -1,0 +1,75 @@
+/*
+VARIABLES
+---
+I like this organization. I've found this color-name-100 .. style ordering in a design system
+and in TailwindCSS. This tells of weight and leans to usage. I think it is not being used right.
+the 100's number should go to opacity. They could all be 900's. There are no other shades of gradiation.
+
+Using 'fs' for font-size and 'fw' for font-weight is also similar to Bootstrap 5 and current TailwindCSS.
+
+Using 'size-x' for for spacers is new.
+
+
+*/
+
+// colors
+$color-neutral-100: #fff;
+$color-neutral-900: #1f3049;
+$color-primary-400: #0066ff;
+
+// font-families
+$ff-sans: 'Open Sans', sans-serif;
+
+// font-sizes
+$fs-900: 3.75rem;   // 60px
+$fs-800: 3rem;      // 48px
+$fs-600: 1.5rem;    // 24px
+$fs-500: 1.3125rem; // 21px
+$fs-400: 1.125rem;  // 18px
+
+// font-weights
+$fw-400: 400;
+$fw-700: 700;
+
+// size/spacing values (Including the border-width)
+$size-8: 0.5rem;
+$size-12: 0.75rem; // (not in design)
+$size-16: 1rem;
+$size-20: 1.25rem;
+$size-32: 2rem;
+$size-36: 2.25rem;
+
+/*
+RESET
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*
+FOR THIS JOB
+*/
+
+body {
+  font-size: $fs-400;
+  font-weight: $fw-400;
+  color: $color-neutral-900;
+  background-color: $color-neutral-100;
+  font-family: $ff-sans;
+  text-align: center;
+}
+
+// this is new to me. Kevin has a video that explains it.
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}

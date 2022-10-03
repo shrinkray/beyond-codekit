@@ -1,6 +1,6 @@
 // colors
-$white: #fff;
-$price: #1f3049;
+$accent: #fff;
+$text: #1f3049;
 $feature: #0066ff;
 
 // types
@@ -8,9 +8,100 @@ $font: "Open Sans", sans-serif;
 
 // fontsize
 $h1: 3.75rem;
-$h2: 3rem;
 $period: 1.5rem;
 $tier: 1.3125rem;
 $cta: 1.125rem;
 
 //spacing 
+body, h1, h2, h3, h4, h5, h6, p, span {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: $h1;
+  font-weight: 400;
+  text-align: center;
+  color: $feature;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+.pricing-plans {
+  display: flex;
+  &:nth-child(2) {
+      background-color: $feature;
+      color: $accent;
+      .button {
+        background-color: $accent;
+        color: $feature;
+      }
+    }
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: .5rem solid $feature;
+  &:nth-child(2) {
+      color: $accent;
+    }
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3125rem;
+    padding-block: 1rem;
+    margin: 0;
+    
+  }
+  &__feature-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+ 
+  }
+  &__list-item {
+   padding-block: 1rem;
+   border-bottom: 1px solid lighten($text, 60%);
+   &:last-child {
+    border: none;
+   }
+  }
+  &__price {
+    font-size: 3rem;
+    font-weight: 700;
+    span {
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+    &:nth-child(2){
+      color: $accent;
+      span {
+        color: $accent;
+      }
+    
+    }
+  }
+  .button {
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: $feature;
+    color: $accent;
+    border: 0;
+    }
+  &:nth-child(2) {
+      background-color: $feature;
+      color: $accent;
+      .button {
+        background-color: $accent;
+        color: $feature;
+      }
+    }
+  
+}
